@@ -7,11 +7,11 @@ try:
     browser = webdriver.Chrome()
     browser.get(link)
 
-    input1 = browser.find_element(By.CSS_SELECTOR, "input.form-cintrol.first")
+    input1 = browser.find_element(By.CSS_SELECTOR, "input.form-control.first")
     input1.send_keys("Ivan")
-    input2 = browser.find_element(By.CSS_SELECTOR, "input.form-cintrol.second")
+    input2 = browser.find_element(By.CSS_SELECTOR, "input.form-control.second")
     input2.send_keys("Petrov")
-    input3 = browser.find_element(By.CSS_SELECTOR, "input.form-cintrol.third")
+    input3 = browser.find_element(By.CSS_SELECTOR, "input.form-control.third")
     input3.send_keys("iVan@gmail.com")
 
     # Отправляем заполненную форму
