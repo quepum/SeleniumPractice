@@ -32,15 +32,16 @@ class TestRegistration(unittest.TestCase):
         browser = webdriver.Chrome()
         browser.get(link)
 
-        input1 = browser.find_element(By.CSS_SELECTOR, ".first_block .form-group.first_class input.form-control")
-        input1.send_keys("Ivan")
-        input2 = browser.find_element(By.CSS_SELECTOR, ".first_block .form-group.second_class input.form-control")
-        input2.send_keys("Petrov")
-        input3 = browser.find_element(By.CSS_SELECTOR, ".first_block .form-group.third_class input.form-control")
-        input3.send_keys("iVan@gmail.com")
+        with self.assertRaises(Exception):
+            input1 = browser.find_element(By.CSS_SELECTOR, ".first_block .form-group.first_class input.form-control")
+            input1.send_keys("Ivan")
+            input2 = browser.find_element(By.CSS_SELECTOR, ".first_block .form-group.second_class input.form-control")
+            input2.send_keys("Petrov")
+            input3 = browser.find_element(By.CSS_SELECTOR, ".first_block .form-group.third_class input.form-control")
+            input3.send_keys("iVan@gmail.com")
 
-        button = browser.find_element(By.CSS_SELECTOR, "button.btn")
-        button.click()
+            button = browser.find_element(By.CSS_SELECTOR, "button.btn")
+            button.click()
 
         browser.quit()
 
